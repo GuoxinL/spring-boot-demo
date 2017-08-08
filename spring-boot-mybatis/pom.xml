@@ -9,14 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-demo-mybatis</artifactId>
+    <artifactId>spring-boot-mybatis</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>pub.guoxin</groupId>
-            <artifactId>component-swagger</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>

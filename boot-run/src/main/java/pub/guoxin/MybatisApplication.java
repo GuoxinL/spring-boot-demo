@@ -11,14 +11,14 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
  */
 @SpringBootApplication
 @MapperScan(basePackages = "pub.guoxin")
-public class Application extends SpringBootServletInitializer {
+public class MybatisApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(MybatisApplication.class, args);
     }
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(Application.class);
+        return application.sources(MybatisApplication.class);
     }
 }

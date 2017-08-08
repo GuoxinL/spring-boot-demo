@@ -52,5 +52,15 @@ fabric.properties
 将删除 spring-boot-demo-mybatis/src/test/
 将删除 spring-boot-demo-mybatis/target/
 /*/*.iml
-/component-swagger/component-swagger.iml
-/spring-boot-demo-mybatis/spring-boot-demo-mybatis.iml
+/swagger/swagger.iml
+/spring-boot-mybatis/spring-boot-mybatis.iml
+将删除 boot-run/src/test/
+将删除 boot-run/target/
+将删除 spring-boot-kafka/src/test/
+将删除 spring-boot-kafka/target/
+将删除 spring-boot-mybatis/src/main/java/pub/guoxin/controller/
+将删除 spring-boot-mybatis/src/test/
+将删除 spring-boot-mybatis/target/
+将删除 swagger/src/main/resources/
+将删除 swagger/src/test/
+将删除 swagger/target/

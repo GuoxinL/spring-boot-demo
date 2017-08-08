@@ -9,20 +9,23 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>component-swagger</artifactId>
+    <artifactId>boot-run</artifactId>
 
     <dependencies>
-        <!--Swagger-->
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>${springfox.version}</version>
+            <groupId>pub.guoxin</groupId>
+            <artifactId>spring-boot-mybatis</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>${springfox.version}</version>
+            <groupId>pub.guoxin</groupId>
+            <artifactId>swagger</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
-        <!--Swagger-->
+        <dependency>
+            <groupId>pub.guoxin</groupId>
+            <artifactId>spring-boot-kafka</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>
