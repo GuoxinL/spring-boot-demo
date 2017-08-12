@@ -1,4 +1,4 @@
-package pub.guoxin;
+package pub.guoxin.mybatis;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.slf4j.Logger;

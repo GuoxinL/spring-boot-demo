@@ -1,12 +1,12 @@
-package pub.guoxin;
+package pub.guoxin.kafka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import pub.guoxin.kafka.MsgConsumer;
-import pub.guoxin.kafka.MsgProducer;
+import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
+@PropertySource({"classpath:application-kafka-1.properties"})
 public class KafkaProducerApplication {
 
     public static void main(String[] args) throws InterruptedException {

@@ -1,4 +1,4 @@
-package pub.guoxin.model;
+package pub.guoxin.mybatis.model;
 
 import java.io.Serializable;
 

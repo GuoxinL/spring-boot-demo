@@ -9,23 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>boot-run</artifactId>
+    <artifactId>spring-boot-oauth</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>pub.guoxin</groupId>
-            <artifactId>spring-boot-mybatis</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>pub.guoxin</groupId>
-            <artifactId>swagger</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>pub.guoxin</groupId>
-            <artifactId>spring-boot-kafka</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+            <version>1.2.1.RELEASE</version>
         </dependency>
     </dependencies>
+
 </project>

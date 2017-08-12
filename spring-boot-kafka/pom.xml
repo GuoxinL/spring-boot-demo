@@ -17,4 +17,15 @@
             <artifactId>spring-kafka</artifactId>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <!-- Spring Boot Maven Support -->
+            <!--注释spring-boot-maven-plugin 否则多个main入口有歧义-->
+            <!--Unable to find a single main class from the following candidates [pub.guoxin.kafka.KafkaConsumerApplication, pub.guoxin.kafka.KafkaProducerApplication]-->
+            <!--<plugin>-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+            <!--</plugin>-->
+        </plugins>
+    </build>
 </project>

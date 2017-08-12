@@ -1,9 +1,9 @@
-package pub.guoxin.mapper;
+package pub.guoxin.mybatis.mapper;
 
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
-import pub.guoxin.model.User;
-import pub.guoxin.model.UserExample;
+import pub.guoxin.mybatis.model.User;
+import pub.guoxin.mybatis.model.UserExample;
 
 public interface UserMapper {
     long countByExample(UserExample example);
