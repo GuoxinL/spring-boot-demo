@@ -19,6 +19,7 @@
         <module>spring-boot-oauth</module>
         <module>spring-boot-mongodb</module>
         <module>spring-boot-neo4j</module>
+        <module>spring-boot-mqtt</module>
     </modules>
 
     <properties>
