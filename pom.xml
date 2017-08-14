@@ -20,6 +20,7 @@
         <module>spring-boot-mongodb</module>
         <module>spring-boot-neo4j</module>
         <module>spring-boot-mqtt</module>
+        <module>spring-boot-security</module>
     </modules>
 
     <properties>

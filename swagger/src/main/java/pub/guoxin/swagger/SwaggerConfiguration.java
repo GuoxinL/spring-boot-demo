@@ -1,4 +1,4 @@
-package pub.guoxin;
+package pub.guoxin.swagger;
 
 import com.google.common.base.Predicate;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

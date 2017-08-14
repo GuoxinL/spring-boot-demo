@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
  * Created by guoxin on 17-3-20.
  */
 @SpringBootApplication
-@ComponentScan("pub.guoxin.neo4j")
+@ComponentScan("pub.guoxin")
 public class Neo4jApplication {
 
     public static void main(String[] args) {
