@@ -21,6 +21,7 @@
         <module>spring-boot-neo4j</module>
         <module>spring-boot-mqtt</module>
         <module>spring-boot-security</module>
+        <module>spring-boot-thymeleaf</module>
     </modules>
 
     <properties>
