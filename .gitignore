@@ -64,3 +64,5 @@ fabric.properties
 将删除 swagger/src/main/resources/
 将删除 swagger/src/test/
 将删除 swagger/target/
+
+/qr-image

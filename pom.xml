@@ -22,6 +22,7 @@
         <module>spring-boot-mqtt</module>
         <module>spring-boot-security</module>
         <module>spring-boot-thymeleaf</module>
+        <module>qr-code</module>
     </modules>
 
     <properties>
