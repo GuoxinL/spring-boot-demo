@@ -13,7 +13,7 @@ public class QRCodeApplication {
     public static void main(String[] args) {
         String path = null;
         try {
-            path = QRCodeUtils.gen200("呵呵呵？");
+            path = QRCodeUtils.gen200("我愛你");
             System.out.println("QRCodeUtils.gen200 : " + path);
         } catch (WriterException | IOException e) {
             e.printStackTrace();
