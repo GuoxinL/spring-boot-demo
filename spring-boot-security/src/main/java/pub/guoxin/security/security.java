@@ -1,4 +1,4 @@
-package pub.guoxin;
+package pub.guoxin.security;
 
 /**
  * Created by guoxin on 17-8-14.

@@ -1,6 +1,8 @@
 package pub.guoxin.demo;
 
+import com.google.zxing.NotFoundException;
 import com.google.zxing.WriterException;
+import pub.guoxin.demo.utils.QRCodeUtils;
 
 import java.io.IOException;
 
@@ -9,9 +11,18 @@ import java.io.IOException;
  */
 public class QRCodeApplication {
     public static void main(String[] args) {
+        String path = null;
         try {
-            QRCodeGenernate.gen200("你好吗？");
+            path = QRCodeUtils.gen200("呵呵呵？");
+            System.out.println("QRCodeUtils.gen200 : " + path);
         } catch (WriterException | IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            String analysis = QRCodeUtils.analysis(path);
+            System.out.println("analysis:" + analysis);
+        } catch (IOException | NotFoundException e) {
             e.printStackTrace();
         }
     }
