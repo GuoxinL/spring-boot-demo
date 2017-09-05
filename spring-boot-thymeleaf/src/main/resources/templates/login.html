@@ -4,10 +4,11 @@
     <title>Spring Security Example </title>
 </head>
 <body>
-<div th:if="${param.error}">
+<div th:if="${error}">
     Invalid username and password.
 </div>
-<div th:if="${param.logout}">
+<span th:text="'error: ' + ${param.message}"></span>
+<div th:if="${logout}">
     You have been logged out.
 </div>
 <form th:action="@{/login}" method="post">
