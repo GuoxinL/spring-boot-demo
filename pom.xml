@@ -24,6 +24,7 @@
         <module>spring-boot-thymeleaf</module>
         <module>qr-code</module>
         <module>spring-boot-jsp</module>
+        <module>spring-boot-jpa</module>
     </modules>
 
     <properties>
