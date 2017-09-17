@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pub.guoxin.mybatis.mapper.SalaryMapper">
+    <resultMap id="BaseResultMap" type="pub.guoxin.mybatis.model.Salary">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="salary" jdbcType="DOUBLE" property="salary"/>
+    </resultMap>
+
+    <select id="findById" parameterType="java.lang.Integer" resultType="pub.guoxin.mybatis.model.Salary">
+        SELECT *
+        FROM salary
+        WHERE id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <update id="modifySalaryById" parameterType="pub.guoxin.mybatis.model.Salary">
+        UPDATE salary
+        SET salary = #{salary,jdbcType=DOUBLE}
+        WHERE id = #{id,jdbcType=INTEGER}
+    </update>
+</mapper>
