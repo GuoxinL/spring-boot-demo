@@ -20,7 +20,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @Configuration
 @EnableSwagger2
-@EnableAutoConfiguration
 public class SwaggerConfiguration extends WebMvcConfigurerAdapter {
     @Bean
     public Docket createRestApi() {

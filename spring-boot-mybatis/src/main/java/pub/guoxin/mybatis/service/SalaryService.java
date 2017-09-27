@@ -7,5 +7,5 @@ import pub.guoxin.mybatis.model.SalaryMessage;
  */
 public interface SalaryService {
 
-    public SalaryMessage transfer(Integer a, Integer b, Double money) throws Exception;
+    SalaryMessage transfer(Integer a, Integer b, Double money) throws Exception;
 }
