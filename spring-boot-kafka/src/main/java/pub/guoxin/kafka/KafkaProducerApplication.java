@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
-@PropertySource({"classpath:application-kafka-1.properties"})
+@PropertySource({"classpath:application-kafka-0.properties"})
 public class KafkaProducerApplication {
 
     public static void main(String[] args) throws InterruptedException {
