@@ -6,14 +6,14 @@
 wget http://ftp.jaist.ac.jp/pub/apache/zookeeper/stable/zookeeper-3.4.10.tar.gz
 tar -xf zookeeper-3.4.10.tar.gz
 ```
-* 进入文件夹并复制一份配置文件
+2. 进入文件夹并复制一份配置文件
 ```bash
 cd zookeeper-3.4.10
 cp zoo_sample.cfg zoo.cfg
 vim zoo.cfg
 ```
 
-* 编辑配置文件zoo.cfg
+3. 编辑配置文件zoo.cfg
 ```bash
 tickTime=2000
 initLimit=10
@@ -28,17 +28,16 @@ dataDir=/opt/amqbroker/zookeeper/data
 dataLogDir=/opt/amqbroker/zookeeper/log
 ```
 
-* 创建配置文件中所指定的dataDir,dataLogDir
+4. 创建配置文件中所指定的dataDir,dataLogDir
 ```bash
 mkdir -p /opt/amqbroker/zookeeper/data/
 mkdir -p /opt/amqbroker/zookeeper/log/
 ```
-* 编写myid配置文件
+5. 编写myid配置文件
 配置文件中的server.n，需要将n写入到/opt/amqbroker/zookeeper/data/myid文件中
 ```bash
 echo "n" > /opt/amqbroker/zookeeper/data/myid
 ```
-
 
 ## 2.启动Zookeeper
 
@@ -54,12 +53,12 @@ Using config: /root/zookeeper-3.4.10/bin/../conf/zoo.cfg
 Error contacting service. It is probably not running.
 ```
 
-* 如果返回结果中没有该进程则表示启动失败，不使用demon模式启动，可以查看到Debug的报错信息
+2. 如果返回结果中没有该进程则表示启动失败，不使用demon模式启动，可以查看到Debug的报错信息
 ```bash
 ./zkServer.sh start-foreground
 ```
 
-* 最后使用jps命令查看是否启动成功,如果返回结果中包含QuorumPeerMain进程则表示启动成功
+3. 最后使用jps命令查看是否启动成功,如果返回结果中包含QuorumPeerMain进程则表示启动成功
 ```bash
 root@kafka-01:# jps
 7872 QuorumPeerMain
@@ -74,7 +73,7 @@ listeners=PLAINTEXT://:9092
 zookeeper.connect=165.227.119.201:2181,165.227.119.247:2181,159.203.175.6:2181
 ```  
 
-* 将advertised.listeners配置追加到server.properties
+2. 将advertised.listeners配置追加到server.properties
 ```bash
 echo "advertised.listeners=PLAINTEXT://you.host.name:9092" >> server.properties
 ```
@@ -94,7 +93,7 @@ Java HotSpot(TM) 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000c00
 # An error report file with more information is saved as:
 # /root/kafka_2.11-0.11.0.1/hs_err_pid6183.log
 ```
-解决办法： 将 kafka-server-start.sh的
+解决办法： 修改KAFKA_HEAP_OPTS内存值
 ```bash
 export KAFKA_HEAP_OPTS="-Xmx1G -Xms1G"
 ```
@@ -104,7 +103,7 @@ export KAFKA_HEAP_OPTS="-Xmx256M -Xms128M"
 ```
 [kafka 启动 报错cannot allocate memory，即内存不足](http://blog.csdn.net/gywtzh0889/article/details/51773536)
 
-* 创建Topic
+2. 创建Topic
 ```bash
 ./kafka-topics.sh --create --zookeeper 165.227.119.201:2181,165.227.119.247:2181,159.203.175.6:2181 --replication-factor 2 --partitions 1 --topic shuaige
 #解释
