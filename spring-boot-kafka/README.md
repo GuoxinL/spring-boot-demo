@@ -119,3 +119,5 @@ export KAFKA_HEAP_OPTS="-Xmx256M -Xms128M"
 ```bash
 ./kafka-console-consumer.sh --zookeeper 165.227.119.201:2181,165.227.119.247:2181,159.203.175.6:2181 --topic shuaige --from-beginning
 ```
+# 引用
+[技术世界 - Kafka,SQL,PostgreSQL,数据库,大数据,分布式,集群,云计算,云计算cloud,Java,设计模式](http://www.jasongj.com/)
