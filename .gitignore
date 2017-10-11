@@ -52,6 +52,7 @@ fabric.properties
 将删除 spring-boot-demo-mybatis/src/test/
 将删除 spring-boot-demo-mybatis/target/
 /*/*.iml
+/*/*/*.iml
 /swagger/swagger.iml
 /spring-boot-mybatis/spring-boot-mybatis.iml
 将删除 boot-run/src/test/

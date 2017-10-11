@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.2.RELEASE</version>
+        <version>1.5.7.RELEASE</version>
     </parent>
     <groupId>pub.guoxin</groupId>
     <artifactId>spring-boot-demo</artifactId>
@@ -25,14 +25,20 @@
         <module>qr-code</module>
         <module>spring-boot-jsp</module>
         <module>spring-boot-jpa</module>
+        <module>spring-boot-netty</module>
     </modules>
-
     <properties>
         <!--Version number-->
         <druid.version>1.0.29</druid.version>
         <mysql.version>5.1.21</mysql.version>
         <mybaatis.genernate>1.3.5</mybaatis.genernate>
 
+        <!-- dubbo -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <com.alibaba.dubbo.version>2.5.3</com.alibaba.dubbo.version>
+        <org.apache.zookeeper.version>3.4.6</org.apache.zookeeper.version>
+        <com.github.sgroschupf.zkclient.version>0.1</com.github.sgroschupf.zkclient.version>
     </properties>
     <dependencies>
         <dependency>
