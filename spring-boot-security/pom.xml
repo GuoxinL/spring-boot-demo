@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-securit</artifactId>
+    <artifactId>spring-boot-security</artifactId>
 
     <properties>
         <jjwt.version>0.7.0</jjwt.version>

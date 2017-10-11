@@ -4,13 +4,16 @@ package pub.guoxin.security.utils;
  * Created by guoxin on 17-8-26.
  */
 
+import com.google.common.collect.Lists;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
+import pub.guoxin.security.enums.Role;
 import pub.guoxin.security.model.JwtUser;
+import pub.guoxin.security.model.User;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -78,7 +81,8 @@ public class JwtTokenUtil implements Serializable {
     }
 
     private Date generateExpirationDate() {
-        return new Date(System.currentTimeMillis() + expiration * 1000);
+//        return new Date(System.currentTimeMillis() + expiration * 1000);
+        return new Date(System.currentTimeMillis() + 604800 * 1000);
     }
 
     private Boolean isTokenExpired(String token) {
@@ -97,11 +101,12 @@ public class JwtTokenUtil implements Serializable {
         return generateToken(claims);
     }
 
-    String generateToken(Map<String, Object> claims) {
+    private String generateToken(Map<String, Object> claims) {
         return Jwts.builder()
                 .setClaims(claims)
                 .setExpiration(generateExpirationDate())
-                .signWith(SignatureAlgorithm.HS512, secret)
+//                .signWith(SignatureAlgorithm.HS512, secret)
+                .signWith(SignatureAlgorithm.HS512, "mySecret")
                 .compact();
     }
 
@@ -132,6 +137,33 @@ public class JwtTokenUtil implements Serializable {
                 username.equals(user.getUsername())
                         && !isTokenExpired(token)
                         && !isCreatedBeforeLastPasswordReset(created, user.getLastPasswordResetDate()));
+    }
+//JwtUser(String id, String username, String password, String email, Collection<? extends GrantedAuthority> authorities, Date lastPasswordResetDate
+    public static void main(String[] args) {
+        JwtTokenUtil jwtTokenUtil = new JwtTokenUtil();
+        User user = new User();
+        user.setEmail("email");
+        user.setId("id");
+        user.setLastPasswordResetDate(new Date());
+        user.setPassword("password");
+        user.setRoles(Lists.newArrayList(Role.ADMIN,Role.SUPPER_ADMIN));
+        user.setUsername("username");
+        JwtUser jwtUser = JwtUserFactory.create(user);
+
+
+        String token = jwtTokenUtil.generateToken(jwtUser);
+
+        String secret = "mySecret";
+        Claims claims;
+        try {
+            claims = Jwts.parser()
+                    .setSigningKey(secret)
+                    .parseClaimsJws(token)
+                    .getBody();
+        } catch (Exception e) {
+            claims = null;
+        }
+        System.out.println(claims.toString());
     }
 }
 

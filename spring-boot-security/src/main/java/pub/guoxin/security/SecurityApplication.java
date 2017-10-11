@@ -2,6 +2,7 @@ package pub.guoxin.security;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * Created by guoxin on 17-8-12.
