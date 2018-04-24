@@ -27,6 +27,8 @@
         <module>spring-boot-jpa</module>
         <module>spring-boot-netty</module>
         <module>spring-boot-security1</module>
+        <module>spring-demo-aop</module>
+        <module>spring-boot-undertow</module>
     </modules>
     <properties>
         <!--Version number-->
@@ -42,20 +44,17 @@
         <com.github.sgroschupf.zkclient.version>0.1</com.github.sgroschupf.zkclient.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>com.github.axet</groupId>
-            <artifactId>kaptcha</artifactId>
-            <version>0.0.9</version>
-        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-mail</artifactId>
-            <version>1.5.8.RELEASE</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
         </dependency>
     </dependencies>
     <!-- (you don't need this if you are using a .RELEASE version) -->

@@ -27,7 +27,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter implemen
                 .password("user")//密码
                 .roles("USER");//角色
 //        通过实现userDetailsService接口类重写loadUserByUsername()方法返回UserDetails进行密码匹配
-        auth.userDetailsService(customUserDetailsService).passwordEncoder(passwordEncoder());
+//        auth.userDetailsService(customUserDetailsService).passwordEncoder(passwordEncoder());
         auth.eraseCredentials(false);
     }
 
@@ -39,7 +39,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter implemen
 //取消安全报文头 默认开启  可配置部分开启或全关
 //.headers().disable()
 //登录页面url 配置登录成功后调用的方法
-                .formLogin().loginPage("/login").permitAll().successHandler(loginSuccessHandler())
+                .formLogin().loginPage("/login").permitAll()/*.successHandler(loginSuccessHandler())*/
                 .and().csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()).and()
                 .authorizeRequests()
 //配置这些链接无需验证
