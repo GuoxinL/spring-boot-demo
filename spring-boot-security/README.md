@@ -2,7 +2,8 @@
 
 ## 使用keytool生成数字证书
 
-```➜ keytool -genkey -keystore keystore.jks -alias tycoonclinet -keyalg RSA
+```
+➜ keytool -genkey -keystore keystore.jks -alias tycoonclinet -keyalg RSA
    输入密钥库口令:  
    密钥库口令太短 - 至少必须为 6 个字符
    输入密钥库口令:  
