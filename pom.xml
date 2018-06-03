@@ -29,8 +29,9 @@
         <module>spring-boot-security1</module>
         <module>spring-demo-aop</module>
         <module>spring-boot-undertow</module>
-        <module>spring-boot-websocket-spring</module>
+        <module>spring-boot-websocket-spring-controller</module>
         <module>spring-boot-websocket-javax</module>
+        <module>spring-boot-websocket-spring-handler</module>
     </modules>
     <properties>
         <!--Version number-->
