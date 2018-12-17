@@ -4,6 +4,7 @@ package pub.guoxin.websocket.javax;
  * Create by guoxin on 2018/4/25
  */
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.websocket.*;
@@ -24,13 +25,14 @@ import java.util.concurrent.ConcurrentHashMap;
  * @since 2017/9/13
  */
 @Component
-@ServerEndpoint(value = "/ws/chat/{username}") //WebSocket客户端建立连接的地址
+@ServerEndpoint(value = "/ws/chat/{username}", configurator = CustomSpringConfigurator.class) //WebSocket客户端建立连接的地址
 public class ChatRoomServerEndpoint {
-
     /**
      * 存活的session集合（使用线程安全的map保存）
      */
     private static Map<String, Session> livingSessions = new ConcurrentHashMap<>();
+    @Autowired
+    private XxxService xxxService;
 
     /**
      * 建立连接的回调方法
@@ -43,6 +45,7 @@ public class ChatRoomServerEndpoint {
         String id = session.getId();
         System.out.println("id" + id);
         livingSessions.put(id, session);
+        xxxService.test();
         sendMessageToAll(username + " 加入聊天室");
     }
 
@@ -55,6 +58,7 @@ public class ChatRoomServerEndpoint {
     @OnMessage
     public void onMessage(String message, Session session, @PathParam("username") String username) {
         sendMessageToAll(username + " : " + message);
+        xxxService.test();
     }
 
 
@@ -68,6 +72,7 @@ public class ChatRoomServerEndpoint {
     public void onError(Session session, Throwable error) {
         System.out.println("发生错误");
         error.printStackTrace();
+        xxxService.test();
     }
 
     /**
@@ -77,6 +82,7 @@ public class ChatRoomServerEndpoint {
     public void onClose(Session session, @PathParam("username") String username) {
         livingSessions.remove(session.getId());
         sendMessageToAll(username + " 退出聊天室");
+        xxxService.test();
     }
 
 

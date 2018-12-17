@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
+import java.util.Arrays;
 import java.util.Map;
 
 /**
@@ -61,9 +62,9 @@ public class QRCodeUtils {
                 "\tresult.getText():" + result.getText() + "\n" +
                 "\tresult.getBarcodeFormat():" + result.getBarcodeFormat() + "\n" +
                 "\tresult.getNumBits():" + result.getNumBits() + "\n" +
-                "\tresult.getRawBytes():" + result.getRawBytes() + "\n" +
+                "\tresult.getRawBytes():" + Arrays.toString(result.getRawBytes()) + "\n" +
                 "\tresult.getResultMetadata():" + result.getResultMetadata() + "\n" +
-                "\tresult.getResultPoints():" + result.getResultPoints() + "\n" +
+                "\tresult.getResultPoints():" + Arrays.toString(result.getResultPoints()) + "\n" +
                 "\tresult.getTimestamp():" + result.getTimestamp()
         );
         System.out.println(result.getBarcodeFormat());
